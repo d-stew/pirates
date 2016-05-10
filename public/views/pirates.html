@@ -1,0 +1,18 @@
+<div>
+  <h1>Pirates</h1>
+
+  <form ng-submit="createPirate(pirate)">
+    <label>Add New Pirate</label>
+    <input type="text" name="name" ng-model="pirate.name" placeholder="Name"></input>
+    <input type="text" name="poison" ng-model="pirate.poison" placeholder="Poison"></input>
+    <input type="text" name="accessory" ng-model="pirate.accessory" placeholder="Accessory"></input>
+    <button ng-click="PiratesService.create()" type="submit" name="button">Add New Pirate!</button>
+  </form>
+
+
+  <div class="center-block" ng-repeat="pirate in pirates">
+    <h1>{{ pirate.name }}</h1>
+    <p>Poison: {{ pirate.poison }}</p>
+    <p>Accessory: {{ pirate.accessory }}</p>
+  </div>
+</div>
